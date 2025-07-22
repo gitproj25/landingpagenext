@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 100%;
+  }
+
+  body {
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Heading Styles */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold text-gray-900;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    text-rendering: optimizeLegibility;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+
+}
+
+
+
+@layer components {
+
+  /* Focus Reset - Remove default focus outlines */
+  button:focus,
+  a:focus,
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+@layer utilities {
+
+  /* Text Optimization */
+  .text-optimized {
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Text Balance for Headlines */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Prevent Orphans */
+  .text-no-orphans {
+    text-wrap: pretty;
+  }
+}
