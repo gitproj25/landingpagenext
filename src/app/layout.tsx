@@ -3,6 +3,8 @@ import './globals.css';
 import './font.css';
 
 import ThemeProviderWrapper from '@/components/common/ThemeProviderWrapper';
+import Header from '@/components/common/Header';
+import Footer from '@/components/common/Footer';
 
 export const metadata: Metadata = {
   title: '',
@@ -28,9 +30,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+        <Header />
         <ThemeProviderWrapper>
-          {children}
+          <main className='pt-20'>{children}</main>
         </ThemeProviderWrapper>
+        <Footer/>
       </body>
     </html>
   );
